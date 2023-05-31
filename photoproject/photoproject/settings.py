@@ -1,5 +1,6 @@
 import os
-
+#Userモデルの代わりにCustomUserモデルを使用する
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 """
 Django settings for photoproject project.
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Photoアプリを追加する
     'photo.apps.PhotoConfig',
+    #accountsアプリを追加する
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
