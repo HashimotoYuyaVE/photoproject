@@ -1,13 +1,12 @@
 from django.contrib import admin
-#CustomUserをインポート
+
 from .models import CustomUser
 
 class CustomUserAdmin(admin.ModelAdmin):
+# Register your models here.
 
-    #レコード一覧に
-    list_display = ('id', 'username')
-    #表示するカラムにリンクを設定
-    list_display_links = ('id', 'username')
+    list_display = ('id','username')
 
-#Django管理サイトに
+    list_display = ('id','username')
+
 admin.site.register(CustomUser, CustomUserAdmin)

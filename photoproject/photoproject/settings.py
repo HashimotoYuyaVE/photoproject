@@ -1,6 +1,5 @@
 import os
-#Userモデルの代わりにCustomUserモデルを使用する
-AUTH_USER_MODEL = 'accounts.CustomUser'
+
 
 """
 Django settings for photoproject project.
@@ -44,7 +43,7 @@ INSTALLED_APPS = [
     #Photoアプリを追加する
     'photo.apps.PhotoConfig',
     #accountsアプリを追加する
-    'accounts.apps.AccountsConfig'
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +129,5 @@ STATICFILES_URL = (os.path.join(BASE_DIR, 'static'),)
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
